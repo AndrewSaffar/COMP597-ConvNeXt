@@ -210,7 +210,9 @@ class Trainer(ABC):
         """
         if model_kwargs is None:
             model_kwargs = {}
+        self.stats.start_process_batch()
         batch = self.process_batch(i, batch)
+        self.stats.stop_process_batch()
 
         self.stats.start_forward()
         loss = self.forward(i, batch, model_kwargs)

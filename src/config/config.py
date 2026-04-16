@@ -6,6 +6,7 @@ import src.config.models as models_config
 import src.config.trainers as trainers_config
 import src.config.trainer_stats as trainer_stats_config
 import src.config.data as data_config
+import src.config.data.fakeimage_dataset as fi_data_config
 
 class Config(_BaseConfig):
 
@@ -22,4 +23,6 @@ class Config(_BaseConfig):
         self.trainer_stats_configs = trainer_stats_config.TrainerStatsConfigs()
         self._arg_data = _Arg(type=str, help="Dataset module to use to load data.", default="dataset")
         self.data_configs = data_config.DataConfigs()
+        self.fi_data_configs = fi_data_config.DataConfig()
+
 

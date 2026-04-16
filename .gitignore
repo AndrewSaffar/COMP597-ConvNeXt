@@ -206,3 +206,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+full_run*/
+run*
+COMP597-starter-code/
+/*/slurm*
+*.log
+*plot*
+submission_data*
